@@ -1,10 +1,10 @@
 1. 2308107010012_1.c
 
-   Program ini bertujuan agar pengguna mampu dalam mengkonversi berbagai jenis bilangan, yaitu dari desimal ke biner, biner ke desimal, desimal ke oktal, dan dari oktal ke desimal. Penjelasan program:
+   Program ini bertujuan agar pengguna mampu dalam meng-konversi berbagai jenis bilangan, yaitu dari desimal ke biner, biner ke desimal, desimal ke oktal, dan dari oktal ke desimal. Penjelasan program:
    
    - Variabel yang digunakan adalah 'pilihan'. Variabel ini digunakan untuk menyimpan pilihan operasi konversi yang dimasukkan oleh pengguna. Variabel lain yang digunakan adalah 'decimal', 'biner', dan 'octal' dengan fungsi sebagai tempat menyimpan nilai bilangan desimal, biner, dan oktal yang dimasukkan oleh pengguna. 
 
-   - Tipe data yang digunakan pada variabel 'pilihan' adalah 'int' dengan format specifier '%d', sedangkan tipe data yang digunakan pada variabel 'decimal', 'biner', dan 'oktal' adalah 'long int' dengan format specifier '%ld'. 
+   - Tipe data yang digunakan pada variabel 'pilihan' adalah 'int' dengan format specifier '%d', sedangkan tipe data yang digunakan pada variabel 'decimal', 'biner', dan 'octal' adalah 'long int' dengan format specifier '%ld'. 
 
    - 'printf' digunakan untuk menampilkan pilihan operasi konversi yang dapat dilakukan oleh pengguna, serta untuk menampilkan pilihan yang harus dimasukkan pengguna, yaitu angka dari 1 hingga 4.
 
@@ -12,17 +12,17 @@
 
    - 'printf' pada case 1 digunakan untuk menampilkan pernyataan yang meminta pengguna memasukkan bilangan desimal.
    
-   - 'printf("biner: ")' digunakan untuk menampilkan bilangan biner yang dihasilkan setelah bilangan dikonversi nantinya.
+   - 'printf("biner: ")' digunakan untuk menampilkan bilangan biner yang dihasilkan setelah bilangan di-konversi nantinya.
 
-   - case 1 pada program ini menggunakan perulangan 'for' untuk membantu dalam melakukan iterasi bit, mengkonvesi digit, dan menampilkan hasil secara sistematis dan efisien.
+   - case 1 pada program ini menggunakan perulangan 'for' untuk membantu dalam melakukan iterasi bit, meng-konvesi digit, dan menampilkan hasil secara sistematis dan efisien.
 
    - 'int i = 15' mendefinisikan variabel 'i' dan memberinya nilai awal 15. Hal ini berarti iterasi akan dimulai dari bit paling signifikan (paling kiri) dari bilangan biner, karena konversi bilangan yang diinginkan adalah dari bilangan desimal menjadi bilangan biner dengan panjang 16 bit (dari 15 hingga 0).
 
-   - 'i >= 0' menunjukkan bahwa iterasi akan terus dilakukan selama nilai 'i' masih lebih besar atau sama dengan 0. Kondisi ini memastikan bahwa iterasi akan berhentu ketikan semua 16 bit bilangan desimal telah dikonversi menjadi bilangan biner. 
+   - 'i >= 0' menunjukkan bahwa iterasi akan terus dilakukan selama nilai 'i' masih lebih besar atau sama dengan 0. Kondisi ini memastikan bahwa iterasi akan berhenti ketika semua 16 bit bilangan desimal telah di-konversi menjadi bilangan biner. 
 
    - 'i--' menyatakan bahwa setelah setiap iterasi, nilai 'i' akan dikurangi satu. Hal ini memastikan bahwa dalam konversi bilangan desimal menjadi bilangan biner akan dilanjutkan ke bit berikutnya.
 
-   - '(decimal >> 1)' merupakan operasi (bitwise shift ke kanan) yang menggeser bilangan desimal ke kanan sebanyak 'i' bit. Pada case 1 program ini, operasi tersebut menggeser digit yang sedang diproses (dari kiri ke kanan) ke posisi paling kanan. Misalnya, jika 'i' adallah 0, maka digit paling kiri yang sedang diproses akan berada di posisi paling kanan dari bilangan biner. 
+   - '(decimal >> 1)' merupakan operasi (bitwise shift ke kanan) yang menggeser bilangan desimal ke kanan sebanyak 'i' bit. Pada case 1 program ini, operasi tersebut menggeser digit yang sedang diproses (dari kiri ke kanan) ke posisi paling kanan. Misalnya, jika 'i' adalah 0, maka digit paling kiri yang sedang diproses akan berada di posisi paling kanan dari bilangan biner. 
 
    - '& 1' merupakan operasi (bitwise AND) yang digunakan untuk mendapatkan nilai bit terakhir (bit terkecil) setelah dilakukan operasi bitwise shift ke kanan. Hal ini dapat terjadi karena operasi bitwise AND dengan 1 pada bit terakhir akan selalu menghasilkan nilai bit itu sendiri.
 
@@ -32,17 +32,17 @@
 
    - 'printf' pada case 2 digunakan untuk menampilkan pernyataan yang meminta pengguna memasukkan bilangan biner.
 
-   - 'long int decimal = 0, i = 0, sisa_bagi;' menyatakan deklarasi variabel yang menggunakan tipe data long int dengan format specifier '%ld'. Variabel 'decimal = 0' digunakan untuk menyimpan hasil konversi bilangan tersebut, 'i = 0' digunakan sebagai penghitung iterasi dalam loop yang digunakan, dan 'sisa_bagi' digunakan untuk menyimpan sisa pembagian saat mengkonversi setiap digitnya.
+   - 'long int decimal = 0, i = 0, sisa_bagi;' menyatakan deklarasi variabel yang menggunakan tipe data long int dengan format specifier '%ld'. Variabel 'decimal = 0' digunakan untuk menyimpan hasil konversi bilangan tersebut, 'i = 0' digunakan sebagai penghitung iterasi dalam loop yang digunakan, dan 'sisa_bagi' digunakan untuk menyimpan sisa pembagian saat meng-konversi setiap digitnya.
 
-   - case 2 pada program ini menggunakan perulangan 'while' untuk membantu dalam mengkonversi setiap digit biner menjadi bilangan desimal secara sistematis, terlepas dari panjang bilangan biner yang diberikan oleh pengguna.
+   - case 2 pada program ini menggunakan perulangan 'while' untuk membantu dalam meng-konversi setiap digit biner menjadi bilangan desimal secara sistematis, terlepas dari panjang bilangan biner yang diberikan oleh pengguna.
 
-   - 'while (biner != 0)' menyatakan bahwa selama nilai variabel 'biner' tidak sama dengan 0, loop akan terus dieksekusi. Maknanya, proses konversi akan berlangsung selama masih ada digit yang tersisa dalam bilangan biner yang akan dikonversi.
+   - 'while (biner != 0)' menyatakan bahwa selama nilai variabel 'biner' tidak sama dengan 0, loop akan terus di-eksekusi. Maknanya, proses konversi akan berlangsung selama masih ada digit yang tersisa dalam bilangan biner yang akan di-konversi.
 
    - 'sisa_bagi = biner % 10' menyatakan bahwa nilai 'sisa_bagi' didapatkan dari hasil operasi modulus bilangan biner dengan 10. Operasi ini digunakan untuk mendapatkan digit paling kanan dari bilangan biner.
 
    - 'biner /= 10' merupakan operasi pembagian bilangan biner dengan 10. Operasi ini menggeser semua digit biner satu posisi ke kanan, sehingga digit paling kanan dihapus dari bilangan biner.
 
-   - 'decimal += sisa_bagi << i;' merupakan operasi yang melakukan shift ke kiri sebanyak 'i' kali pada nilai 'sisa_bagi' (digit biner yang sudah dikonversi menjadi digit desimal), kemudian hasilnya ditambahkan ke nilai variabel 'desimal'.
+   - 'decimal += sisa_bagi << i;' merupakan operasi yang melakukan shift ke kiri sebanyak 'i' kali pada nilai 'sisa_bagi' (digit biner yang sudah di-konversi menjadi digit desimal), kemudian hasilnya ditambahkan ke nilai variabel 'desimal'.
 
    - 'i++' digunakan sebagai penghitung untuk menentukan bobot digit dalam bilangan desimal. Notasi ini menunjukkan bahwa pada setiap iterasi, nilai 'i' akan bertambah satu.
 
@@ -60,13 +60,13 @@
 
    - 'printf' pada case 4 digunakan untuk menampilkan pernyataan yang meminta pengguna memasukkan bilangan oktal.
 
-   - case 4 pada program ini menggunakan perulangan 'while' untuk membantu dalam mengonversi setiap digit oktal menjadi digit desimal secara sistematis, terlepas dari panjang bilangan oktal yang diberikan oleh pengguna.
+   - case 4 pada program ini menggunakan perulangan 'while' untuk membantu dalam meng-konversi setiap digit oktal menjadi digit desimal secara sistematis, terlepas dari panjang bilangan oktal yang diberikan oleh pengguna.
 
-   - 'while (octal != 0)' menyatakan bahwa selama nilai variabel 'oktal' tidak sama dengan 0, loop akan terus dieksekusi. Maknanya, proses konversi akan berlangsung selama masih ada digit yang tersisa dalam bilangan oktal yang akan dikonversi.
+   - 'while (octal != 0)' menyatakan bahwa selama nilai variabel 'oktal' tidak sama dengan 0, loop akan terus di-eksekusi. Maknanya, proses konversi akan berlangsung selama masih ada digit yang tersisa dalam bilangan oktal yang akan di-konversi.
 
    - 'digit = octal % 8;' menyatakan bahwa nilai 'digit' didapatkan dari hasil operasi modulus bilangan oktal dengan 8. Hal ini dilakukan karena basis oktal adalah 8 (digit oktal berkisar dari 0 hingga 7). Operasi ini digunakan untuk mendapatkan digit paling kanan dari bilangan oktal. 
 
-   - 'decimal += ((digit) * (pangkatOctal));' merupakan operasi yang mengalikan nilai 'digit' (digit oktal yang telah dikonversikan menjadi digit desimal) dengan 'pangkatOctal', kemudian hasilnya ditambahkan ke nilai variabel 'decimal'.
+   - 'decimal += ((digit) * (pangkatOctal));' merupakan operasi yang mengalikan nilai 'digit' (digit oktal yang telah di-konversi-kan menjadi digit desimal) dengan 'pangkatOctal', kemudian hasilnya ditambahkan ke nilai variabel 'decimal'.
 
    - 'pangkatOctal = pangkatOctal * 8;' merupakan operasi yang mengalikan nilai 'pangkatOctal' dengan 8. Hal ini dilakukan agar posisi pangkat dapat digerakkan ke digit oktal berikutnya.
 
@@ -78,7 +78,7 @@
 
    - 'default:' digunakan pada program ini untuk mengatasi kasus ketika pengguna memasukkan nilai selain dari 1-4 saat pernyataan 'pilihan' ditampilkan.
 
-   -  'printf("MASUKKAN PILIHAN YANG SESUAI!")' digunakan untuk menampilkan pesan kesalahan saat pengguna memasukkan pilihan yang tidak valid, sehingga dapat mencegah terjadinya kesalahan dalam eksekusi program.
+   -  'printf("MASUKKAN PILIHAN YANG SESUAI!")' digunakan untuk menampilkan pesan bahwa terdapat kesalahan saat pengguna memasukkan pilihan yang tidak valid, sehingga dapat mencegah terjadinya kesalahan dalam eksekusi program.
 
    - 'return 0' menyatakan bahwa nilai 0 dikembalikan. Notasi ini digunakan untuk memberikan informasi kepada sistem operasi bahwa program telah selesai dengan sukses dan tidak ada masalah yang terjadi selama eksekusi.
 
@@ -112,7 +112,7 @@
 
    - '(tahun < 1000 ||  tahun > 9999)' menyatakan bahwa tahun yang dimasukkan pengguna kurang dari 1000 atau lebih dari 9999. Hal ini menunjukkan bahwa input tahun yang dimasukkan tidak memiliki tepat empat digit. 
 
-   - 'printf("TAHUN YANG ANDA MASUKKAN TIDAK MEMILIKI EMPAT DIGIT. SILAHKAN MASUKKAN KEMBALI! \n")' digunakan untuk mencetak pesan terjadinya kesalahan dan meminta pengguna memasukkan kembali inputnya jika kondisi '(tahun < 1000 ||  tahun > 9999)' terpenuhi.
+   - 'printf("TAHUN YANG ANDA MASUKKAN TIDAK MEMILIKI EMPAT DIGIT. SILAHKAN MASUKKAN KEMBALI! \n")' digunakan untuk mencetak pesan bahwa terdapat kesalahan dan meminta pengguna memasukkan kembali inputnya jika kondisi '(tahun < 1000 ||  tahun > 9999)' terpenuhi.
 
    - 'continue' digunakan untuk melanjutkan iterasi loop saat ini, sehingga program kembali ke awal loop 'while (1)' untuk meminta pengguna memasukkan input kembali.
 
